@@ -1,15 +1,15 @@
-titulo = str('coletor de dados').upper()
-print(f'{titulo:-^30}')
+titulo = str('Distribuição de Frequência ')
+print(f'{titulo:^50}')
+print()
+tipo_de_dados = input('Informe o tipo de dados coletados:\n')
+quantidade_de_dados = int(input('Informe a quantidade de dados coletados:\n'))
+print()
 
-tipo_de_dados = input('Tipo de dados coletados: ')
-coleta_de_dados = int(input('Adicione os dados coletados: '))
-adicionar_mais_dados = input('Quer adicionar mais dados? \n[S/N]:').upper()
-
-dados = [coleta_de_dados]
-if adicionar_mais_dados == 'S':
-  while adicionar_mais_dados == 'S':
-    mais_dados = int(input('Adicione os dados coletados: '))
-    dados.append(mais_dados)
-    adicionar_mais_dados = input('Quer adicionar mais dados? \n[S/N]:').upper()   
-
-print(f'Os dados que você colheu são :{dados})
+dados = []
+while True:
+  mais_dados = (int(input('Adicione o dado coletado:\n')))
+  dados.append(mais_dados)
+  opção = input('Quer adicionar mais?\n[S/N]: ').upper()
+  if opção == 'N':
+    break
+print(dados)
